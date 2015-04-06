@@ -22,5 +22,14 @@ set number
 set autoindent
 set tabstop=2
 set shiftwidth=2
+
+" OSのクリップボードを使用する
+set clipboard+=unnamed
+"ヤンクした文字は、システムのクリップボードに入れる"
+set clipboard=unnamedplus,unnamed
+" 挿入モードでCtrl+kを押すとクリップボードの内容を貼り付けられるようにする "
+imap <C-p>  <ESC>"*pa
+
+
 noremap <C-j> <esc>
 noremap! <C-j> <esc>
